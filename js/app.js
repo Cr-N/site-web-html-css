@@ -83,6 +83,5 @@ function searchProjects (event) {
         generateCard(found);
     }
  }
-
-
+ 
  searchForm.addEventListener('submit', searchProjects);
