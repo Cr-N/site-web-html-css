@@ -1,0 +1,329 @@
+body{
+    margin: 0;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Meniu de navigatie */
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-menu li{
+    flex: 1; /*width: 33,33% */
+    text-align: center;
+    font-weight: bold;
+    padding: 1em;
+    cursor:pointer;
+}
+
+.nav-menu .nav-link{
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #111111;
+}
+
+/* Dark mode */
+.dark-mode .nav-link {
+    color: white;
+
+}
+
+.nav-menu li:hover .nav-link{
+    transition: all 0.5s ease-in-out;
+    color: red;
+    letter-spacing: 2px;
+}
+
+/* Dark mode toggler */ 
+#mode-toggle{   
+    background-image: url("../img/dark.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    transition: transform 0.5s linear;
+}
+
+
+#mode-toggle:hover{
+    cursor: pointer;
+    transform: rotate(180deg);
+}
+
+
+
+/* Jumbotron */
+
+.jumbotron-section{
+    background: linear-gradient(
+        rgba(255 , 255 ,255, 0.25),
+        rgba(0, 0, 0, 0.25)
+    ),
+    url("https://source.unsplash.com/1600x900/?minecraft");
+    height: calc(100vh - 59px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    font-size: 2em;
+    text-shadow: 0px 0px 5px black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.jumbotron-section .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.jumbotron-section h1{
+    text-align: center;
+}
+
+
+.jumbotron-section h1,
+.jumbotron-section p {
+    z-index: 2;
+    max-width: 700px;
+    width: 100%;
+}
+
+.page-content {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    max-width: 1200px;
+    margin:  10px auto;
+}
+
+
+.page-content .page-content--text{
+    margin-right: 30px;
+    width: 30%;
+}
+
+
+
+.page-content .page-content--img{
+    width: 50%;
+    border-radius: 15px;
+}
+
+/* Sectiune Carduri */
+.cards-container {
+    padding: 50px 30px;
+}
+
+.cards-container h2 {
+    font-size: 38px;
+    text-align: center;
+}
+
+
+
+.cards-list{
+    display: grid;
+    grid-gap: 1rem;
+    list-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cards-list li{
+    padding: 0px;
+    margin: 0px;
+}
+
+.card {
+    padding: 25px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+/* Dark Mode */
+.dark-mode .card {
+    border-color: white;
+}
+
+.card img{
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+}
+.card button {
+    background-color: white;
+    color: black;
+    border: 1px solid #333;
+    border-radius: 5px;
+    width: 100%;
+    line-height: 40px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+/* Dark Mode */
+.dark-mode .card button {
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
+/* Dark Mode */
+.dark-mode .card button:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+
+.card button:hover{
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+
+
+
+/* Sectiune Carduri END*/
+
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 60px 30px;
+}
+
+footer p{
+    text-align: center;
+    margin: 0;
+}
+
+
+/* Pagina Catalog HTML */
+.catalog {
+    margin: 40px auto;
+    padding: 50px 30px;
+}
+
+.catalog form {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.catalog form input{ 
+    min-width: 50%;
+    line-height:30px;
+    margin-top:10px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.catalog form button {
+    line-height: 30px;
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius:  5px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    transition: all 0.3s linear;
+}
+
+.catalog form button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Dark mode  */
+.dark-mode .catalog  form button {
+    background-color: black;
+    color: white;
+    border:  1px solid white;
+}
+
+.dark-mode .catalog  form button:hover {
+    background-color: white;
+    color: black;
+    border:  1px solid black ;
+}
+
+
+iframe {
+    border: none;
+    width: 100%;  
+    height: 55vh;  
+}
+
+
+
+
+@media screen and (max-width:600px){
+    .jumbotron-section h1 {
+        margin: 5px 30px !important;
+    }
+
+    .jumbotron-section h1,
+    .jumbotron-section p{
+        font-size: 0.8em;
+        margin: 0 30px;
+    }
+    .page-content{
+        display: block;
+    }
+
+
+
+    .page-content .page-content--img{
+        width: 100%;
+    }
+
+    .page-content .page-content--text{
+        width:100%;
+    }
+}
+
+/* Style pt display-uri mai mari decat 600px */
+@media only screen and (min-width: 600px) {
+    .cards-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Style pt display-uri de mai mari decat 900px */
+
+@media only screen and (min-width: 900px){
+    .cards-list{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+
+
+
+

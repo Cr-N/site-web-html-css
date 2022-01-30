@@ -1,0 +1,26 @@
+{
+    "proiecte" : [
+        {
+            "nume": "Radient Background Generator",
+            "decriere" : "O pagina care ne ajutala vizualizarea unui background de tip linear-backgriund ",
+            "imagine" : "./img/bg-generator.png",  
+            "link" : "./proiecte/bg-generator/index.html",
+            "limbajeDeProgramare" : ["HTML" , "CSS" , "Javascript"]
+        },
+
+        {
+            "nume": "Pixel art",
+            "decriere" : "O pagina care ne genereaza un canvas pe care putem face desene pixelate",
+            "imagine" : "./img/pixel.art.png",  
+            "link" : "./proiecte/pixel-art/index.html",
+            "limbajeDeProgramare" : ["HTML" , "CSS" , "Javascript"]
+        },
+        {
+            "nume": "Not a project",
+            "decriere" : "O pagina care nu exista",
+            "imagine" : "./img/pixel.art.png",  
+            "link" : "./proiecte/proiect_1/index.html",
+            "limbajeDeProgramare" : ["HTML" , "CSS" , "Javascript"]
+        }
+    ]
+}

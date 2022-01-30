@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Catalog</title>
+        <link rel="stylesheet" href="style/app.css">
+        <style>
+            /* Aplicatia style-ului de la hover elementului a carui atribuit "href" incepe cu ... */
+            .nav-menu .nav-link[href^="catalog"]{
+                color: red;
+                letter-spacing: 2px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Meniu navigatie -->
+        <nav>
+            <ul class="nav-menu">
+
+                <li>
+                    <a href="acasa.html" class="nav-link">Acasa</a>
+                </li>
+                <li>
+                    <a href="catalog.html" class="nav-link">Catalog</a>
+                </li>
+                <li>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+
+            </ul>
+            <span id="mode-toggle"></span>
+        </nav>
+        <!-- END Meniu navigatie -->
+
+        <!-- Continut Pagina -->
+        <main class="catalog">
+            <form id="searchForm" >
+                <input type="text" placeholder="Cauta">
+                <button type="submit">Cauta</button>
+            </form>
+            <ul class="cards-list"></ul>
+        </main>
+        <!-- END Continut Pagina -->
+
+        <script src="./js/app.js"></script>
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-app.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+
+            import { getDatabase, ref , child , get } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-database.js";
+          
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+              apiKey: "AIzaSyAJ_xoT4rR9uiublrqVJKbHckbDylk7el0",
+              authDomain: "site-web-e0a88.firebaseapp.com",
+              databaseURL: "https://site-web-e0a88-default-rtdb.firebaseio.com",
+              projectId: "site-web-e0a88",
+              storageBucket: "site-web-e0a88.appspot.com",
+              messagingSenderId: "464311997827",
+              appId: "1:464311997827:web:0e7b76864f1656521852b6"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            // Initialize the db
+            const database = getDatabase(app);
+            // Referinta catre baza de date
+            const dbRef = ref(database);
+            // Preluam lista de proiecte din baza de date
+            get(child(dbRef,'proiecte'))
+                // Dupa ce preluam lista, extragem datele
+                .then(function(data) {
+                    if (data.exists()) {
+                        // Exista date, returanam lista de proiecte
+                        const listaProiecte = data.val();
+
+                        // Pentru fiecare proiect din lista, generam un card
+                        listaProiecte.forEach(function(el){
+                            generateCard(el);
+                        });
+
+                        projects = listaProiecte;
+                    }
+                    else {
+                        // Nu esxusta date, afisam un mesaj in consola 
+                        console.log("NU EXISTA DATE!!!")
+                    }
+                })
+                // Daca nu exista lista, afisam un mesaj de eroare
+                .catch(function(error){
+                    console.log(error)
+                });
+          </script>
+    </body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Acasa</title>
+        <link rel="stylesheet" href="style/app.css">
+        <style>
+            /* Aplicatia style-ului de la hover elementului a carui atribuit "href" incepe cu ... */
+            .nav-menu .nav-link[href^="acasa"]{
+                color: red;
+                letter-spacing: 2px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Meniu navigatie -->
+        <nav>
+            <ul class="nav-menu">
+
+                <li>
+                    <a href="acasa.html" class="nav-link">Acasa</a>
+                </li>
+                <li>
+                    <a href="catalog.html" class="nav-link">Catalog</a>
+                </li>
+                <li>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+
+            </ul>
+            <span id="mode-toggle"></span>
+        </nav>
+        <!-- END Meniu navigatie -->
+
+         <!-- Jumbotronm -->
+        <div class="jumbotron-section">
+            <div class="overlay"></div>
+        <h1>Site-ul<strong> meu</strong></h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus similique praesentium consequatur ad nam excepturi ex eos quibusdam. Quasi eaque asperiores impedit nemo quia ea quas iure quod aut. Eveniet!</p>
+        </div>
+         <!-- END Jumbotronm -->
+
+
+         <!-- Page Content -->
+         <section class="page-content">
+             <div class="page-content--text">
+                 <p>
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ipsa, non optio deserunt eveniet odio molestiae dolorem fugiat quo numquam cupiditate repellendus, laudantium odit? Quos quaerat sunt vero eaque commodi.
+                 </p>
+                 <p>
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi molestias sequi, aperiam voluptate harum quia voluptatem repudiandae adipisci distinctio soluta rem iusto optio consectetur animi nesciunt non excepturi, expedita numquam!
+                 </p>
+             </div>
+             <img src="https://source.unsplash.com/800x450/?panda" alt ="Side Image" class="page-content--img">
+         </section>
+         <!-- Page Content -->
+
+
+         <!-- Sectiune carduri -->
+         <section class="cards-container">
+             <h2>Proiectele Mele</h2>
+             <ul class="cards-list"></ul>
+         </section>
+         <!-- Sectiune carduri  END-->
+
+
+         <footer>
+             <p>
+                 Copyright 2022
+             </p>
+         </footer>
+         <script src="./js/app.js"></script>
+
+
+
+
+         <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-app.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+
+            import { getDatabase, ref , child , get } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-database.js";
+          
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+              apiKey: "AIzaSyAJ_xoT4rR9uiublrqVJKbHckbDylk7el0",
+              authDomain: "site-web-e0a88.firebaseapp.com",
+              databaseURL: "https://site-web-e0a88-default-rtdb.firebaseio.com",
+              projectId: "site-web-e0a88",
+              storageBucket: "site-web-e0a88.appspot.com",
+              messagingSenderId: "464311997827",
+              appId: "1:464311997827:web:0e7b76864f1656521852b6"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            // Initialize the db
+            const database = getDatabase(app);
+            // Referinta catre baza de date
+            const dbRef = ref(database);
+            // Preluam lista de proiecte din baza de date
+            get(child(dbRef,'proiecte'))
+                // Dupa ce preluam lista, extragem datele
+                .then(function(data) {
+                    if (data.exists()) {
+                        // Exista date, returanam lista de proiecte
+                        const listaProiecte = data.val();
+
+                        // Pentru fiecare proiect din lista, generam un card
+                        listaProiecte.forEach(function(el){
+                            generateCard(el);
+                        });
+                    }
+                    else {
+                        // Nu esxusta date, afisam un mesaj in consola 
+                        console.log("NU EXISTA DATE!!!")
+                    }
+                })
+                // Daca nu exista lista, afisam un mesaj de eroare
+                .catch(function(error){
+                    console.log(error)
+                });
+          </script>
+    </body>
+</html>
