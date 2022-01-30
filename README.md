@@ -5,4 +5,5 @@
 `git pull origin` - salveaza local modificarile din origin  
 `git push origin [branch_name]` -salveaza in origin modificarile din local  
 `git branch [nume_branch]` - adauga un branch nou  
-`git checkout [nume_branch]` - ne muta pe branchul nou
+`git checkout [nume_branch]` - ne muta pe branchul nou  
+`git merge [branch_name]` - adauga schimbarile din branchul definit in branchul actual
