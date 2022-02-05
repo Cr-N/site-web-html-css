@@ -4,6 +4,9 @@
     <head>
         <title>Contact</title>
         <link rel="stylesheet" href="style/app.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
         <script src="./js/app.js"></script>
         <style>
             /* Aplicatia style-ului de la hover elementului a carui atribuit "href" incepe cu ... */
@@ -14,7 +17,7 @@
         </style>
     </head>
 
-    <body>
+    <body class="contactBody">
         <!-- Meniu navigatie -->
         <nav>
             <ul class="nav-menu">
@@ -34,5 +37,70 @@
         </nav>
         <!-- END Meniu navigatie -->
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2762.6935351770453!2d21.318470315455816!3d46.17675597911586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47459996dc342647%3A0x359e2ce586db5efd!2sCode%20School%20Clubs%20Arad!5e0!3m2!1sro!2sro!4v1643544878347!5m2!1sro!2sro"  allowfullscreen="" loading="lazy"></iframe>
+        <!-- Contact -->
+        <div class="container">
+            <h1>Contact Me</h1>
+            <p>Feel free to contact me!</p>
+            <div class="contact-box">
+                <div class="contact-left">
+                    <h3>Send Your Message</h3>
+                    <form>
+
+
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label>Name</label> 
+                                <input type="text" placeholder="John Smith">
+                            </div>
+
+                            <div class="input-group">
+                                <label>Phone</label>
+                                <input type="text" placeholder="0712 345 678">
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label>Email</label> 
+                                <input type="email" placeholder="Email address">
+                            </div>
+                            <div class="input-group">
+                                <label>Subject</label>
+                                <input type="text" placeholder="Subject of message">
+                            </div>
+                        </div>
+
+                        <label>Message</label>
+                        <textarea rows="5" placeholder="Your message"></textarea>
+
+                        <button type="submit">Send</button>
+                    </form>
+
+                </div>
+                <div class="contact-right">
+                    <h3>Reach me</h3>
+                    
+                    <table>
+                        <tr>
+                            <td>Email : </td>
+                            <td>myfakeemail@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>Phone : </td>
+                            <td>0714 253 353 </td>
+                        </tr>
+
+                        <tr>
+                            <td>Address : </td>
+                            <td>Romania, Arad, Street No, Nr. No</td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- END Contact -->
     </body>
 </html>
