@@ -10,6 +10,7 @@ const body = document.body;
 // Selectam span-ul cu id mode-toggle
 const darkModeToggler = document.getElementById("mode-toggle");
 
+
 //Adaugam eveniment de click la mode-toggle
 darkModeToggler.addEventListener( 'click', function(){ 
 // On click add/remove clasa dark la body
@@ -85,3 +86,5 @@ function searchProjects (event) {
  }
  
  searchForm.addEventListener('submit', searchProjects);
+
+//  <button type="submit" <a href="mailto:no-one@snai1mai1.com?subject=look at this website&body=Hi,I found this website and thought you might like it http://www.geocities.com/wowhtml/"></a>>Send</button>

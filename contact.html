@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
-        <!-- <script src="./js/app.js"></script> -->
+        <script defer src="./js/contact.js"></script>
         <style>
             /* Aplicatia style-ului de la hover elementului a carui atribuit "href" incepe cu ... */
             .nav-menu .nav-link[href^="contact"]{
@@ -44,35 +44,35 @@
             <div class="contact-box">
                 <div class="contact-left">
                     <h3>Send Your Message</h3>
-                    <form>
+                    <form >
 
 
                         <div class="input-row">
                             <div class="input-group">
                                 <label>Name</label> 
-                                <input type="text" placeholder="John Smith">
+                                <input id="Name" type="text" placeholder="John Smith">
                             </div>
 
                             <div class="input-group">
                                 <label>Phone</label>
-                                <input type="text" placeholder="0712 345 678">
+                                <input id="Phone" type="text" placeholder="0712 345 678">
                             </div>
                         </div>
                         <div class="input-row">
                             <div class="input-group">
                                 <label>Email</label> 
-                                <input type="email" placeholder="Email address">
+                                <input id="Email" type="email" placeholder="Email address">
                             </div>
                             <div class="input-group">
                                 <label>Subject</label>
-                                <input type="text" placeholder="Subject of message">
+                                <input id="Subject" type="text" placeholder="Subject of message">
                             </div>
                         </div>
 
                         <label>Message</label>
-                        <textarea rows="5" placeholder="Your message"></textarea>
-
-                        <button type="submit">Send</button>
+                        <textarea id="Message" rows="5" placeholder="Your message"></textarea>
+                        <button type="submit" id="send-button" onsubmit="sendMessage()">Send</button>
+                        <!-- <a id="send" type="s href="mailto:no-one@snai1mai1.com?subject=look at this website&body=Hi,I found this website and thought you might like it http://www.geocities.com/wowhtml/">Send</a> -->
                     </form>
 
                 </div>
