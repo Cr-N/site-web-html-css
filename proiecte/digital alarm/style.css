@@ -1,0 +1,51 @@
+body{
+    text-align: center;
+}
+#clock-container{
+    max-width: 500px;
+    margin: 30px auto;
+    background-color: black;
+    padding: 2em;
+    border-radius: 5px;
+}
+.clock-display{
+    padding: 2em;
+    font-size: 3em;
+    color: #c1c1c1;
+    background-color: #0f1620;
+    border-radius: 5px;
+}
+
+#container-date{
+    font-size: 0.5em;
+}
+.alarm-display{
+    margin: 20px auto;
+}
+.alarm-display *{
+    border: none;
+}
+
+.alarm {
+    animation-name: ring;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ring {
+    0% {
+        transform: rotate3d(50, 245, 67, 37deg);
+    }
+    25% {
+        transform: rotate3d(55, 200, 67, 37deg);
+    }
+    50%{
+        transform: rotate3d(65, 180, 67, 37deg);
+    }
+    75%{
+        transform: rotate3d(48, 200, 67, 37deg);
+    }
+    100%{
+        transform: rotate3d(50, 245, 67, 37deg);
+    }
+}
