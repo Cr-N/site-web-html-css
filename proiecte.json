@@ -16,11 +16,12 @@
             "limbajeDeProgramare" : ["HTML" , "CSS" , "Javascript"]
         },
         {
-            "nume": "Not a project",
-            "decriere" : "O pagina care nu exista",
+            "nume": "Digital Alarm clock",
+            "decriere" : "Alarm Clock that goes tudutudutududu",
             "imagine" : "./img/pixel.art.png",  
-            "link" : "./proiecte/proiect_1/index.html",
+            "link" : "./proiecte/digital-alarm/index.html",
             "limbajeDeProgramare" : ["HTML" , "CSS" , "Javascript"]
         }
+
     ]
 }
