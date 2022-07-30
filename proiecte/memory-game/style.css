@@ -1,0 +1,51 @@
+body {
+    background-color: darkgray;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 64px auto;
+    flex-wrap: wrap;
+}
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+    height: 200px;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    margin: 0 10px 10px 0;
+    font-size: 6em;
+    transition: all 0.3s;
+    opacity: 100%;
+}
+.card:hover{
+    cursor: pointer;
+    background-color: aqua;
+    transform: rotate(-20deg) scale(0.95);
+}
+
+.found{
+    opacity: 0;
+}
+
+p{
+    opacity: 0;
+    transition: all 0.3s;
+    user-select: none;
+}
+
+.active p{
+    opacity: 100%;
+}
+
+#remaining {
+    text-align: center;
+    color: brown;
+}
+h1{
+    text-align: center;
+}
