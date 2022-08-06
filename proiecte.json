@@ -18,24 +18,30 @@
         {
             "nume": "Digital Alarm clock",
             "decriere" : "Alarm Clock that goes tudutudutududu",
-            "imagine" : "./img/pixel.art.png",  
+            "imagine" : "./img/DgAlarm.png",  
             "link" : "./proiecte/digital-alarm/index.html",
             "limbajeDeProgramare" : ["HTML" , "CSS" , "Javascript"]
         },
         {
             "nume": "Memory Game",
             "decriere" : "Memory game based on emojis",
-            "imagine" : "./img/pixel.art.png",  
+            "imagine" : "./img/MemoryGame.png",  
             "link" : "./proiecte/memory-game/index.html",
             "limbajeDeProgramare" : ["HTML" , "CSS" , "Javascript"]
         },
         {
             "nume": "Animation",
             "decriere" : "Cool animation",
-            "imagine" : "./img/pixel.art.png",  
+            "imagine" : "./img/Animation.png",  
             "link" : "./proiecte/animation(extra)/index.html",
             "limbajeDeProgramare" : ["HTML" , "CSS"]
+        },
+        {
+        "nume": "Canvas-Intro",
+        "decriere" : "A canvas animation",
+        "imagine" : "./img/CanvasIntro.png",  
+        "link" : "./proiecte/canvasIntro/index.html",
+        "limbajeDeProgramare" : ["HTML" , "CSS" , "Javascript"]
         }
-
     ]
 }
