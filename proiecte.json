@@ -21,6 +21,20 @@
             "imagine" : "./img/pixel.art.png",  
             "link" : "./proiecte/digital-alarm/index.html",
             "limbajeDeProgramare" : ["HTML" , "CSS" , "Javascript"]
+        },
+        {
+            "nume": "Memory Game",
+            "decriere" : "Memory game based on emojis",
+            "imagine" : "./img/pixel.art.png",  
+            "link" : "./proiecte/memory-game/index.html",
+            "limbajeDeProgramare" : ["HTML" , "CSS" , "Javascript"]
+        },
+        {
+            "nume": "Animation",
+            "decriere" : "Cool animation",
+            "imagine" : "./img/pixel.art.png",  
+            "link" : "./proiecte/animation(extra)/index.html",
+            "limbajeDeProgramare" : ["HTML" , "CSS"]
         }
 
     ]
